@@ -1,0 +1,854 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+:root {
+  --apple-font-size: 12px;
+  --apple-font-weight: 300;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+span {
+  text-align: center;
+}
+
+/* header */
+
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.gnb {
+  width: 1024px;
+  height: 44px;
+  margin: 0 auto;
+  color: #f5f5f7;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
+}
+.apple-logo-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+.gnb-li1 {
+  width: 14px;
+  height: 44px;
+  background-image: url(/img/apple/globalnav_apple_image__b5er5ngrzxqq_large.svg);
+}
+.gnb-li2 {
+  width: 14px;
+  height: 44px;
+  background-image: url(/img/apple/globalnav_search_image__cbllq1gkias2_large.svg);
+}
+.gnb-li3 {
+  width: 14px;
+  height: 44px;
+  background-image: url(/img/apple/globalnav_bag_image__yzte50i47ciu_large.svg);
+}
+
+.header-bottom {
+  background-color: rgba(245, 245, 247, 0.6);
+}
+.pro-icon-box {
+  display: flex;
+  justify-content: center;
+  font-size: var(--apple-font-size);
+  padding: 8px 0;
+}
+.pro-icon-box li {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.pro-icon-box li span {
+  display: block;
+}
+.pro-icon-box li .new {
+  font-size: 10px;
+  color: #bf4800;
+}
+.pro-icon-box img {
+  width: 100%;
+  height: 54px;
+}
+.pro-icon-box li div {
+  width: 45px;
+}
+.header-bottom_advertise {
+  background-color: #f5f5f7;
+  display: flex;
+  justify-content: center;
+  font-size: var(--apple-font-size);
+  font-weight: var(--apple-font-weight);
+  padding: 9px 0;
+}
+.header-bottom_advertise a {
+  color: #0066cc;
+}
+.header-bottom_advertise a::after {
+  content: ">";
+  padding-left: 3px;
+}
+
+/* section mini */
+.mini-box {
+  border-bottom: 13px solid #f5f5f7;
+}
+.mini-wrap {
+  text-align: center;
+  display: flex;
+  width: 980px;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 120px;
+}
+.mini-title-wrap {
+  display: flex;
+  align-items: center;
+}
+.mini-title {
+  font-size: 56px;
+}
+.mini-price {
+  display: block;
+}
+.mini-price-more {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  border: none;
+  margin: 12px 0;
+}
+.mini-image {
+  z-index: 100;
+}
+.mini-title-box .mini-new {
+  font-size: 12px;
+  color: #bf4800;
+}
+.mini-title-box {
+  padding-top: 85px;
+  padding-right: 100px;
+}
+.mini-title-wrap img {
+  width: 103px;
+  height: 41px;
+  padding-left: 10px;
+}
+.mini-epx {
+  font-size: 20px;
+  font-weight: 550;
+}
+.mini-price {
+  margin-top: 20px;
+}
+.mini-more {
+  color: #0066cc;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.mini-more::after {
+  content: ">";
+  padding-left: 5px;
+}
+.notice-date {
+  margin-top: 10px;
+  color: #86868b;
+  font-size: 15px;
+}
+
+/* section ipad-box */
+
+.ipad-wrap {
+  display: flex;
+  overflow: hidden;
+}
+.ipad-container {
+  width: 980px;
+  height: 715px;
+  margin: 0 auto;
+}
+.ipad-epx {
+  font-size: 20px;
+  font-weight: 550;
+}
+.ipad-price {
+  margin-top: 20px;
+  display: block;
+}
+.ipad-more {
+  color: #0066cc;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.ipad-more::after {
+  content: ">";
+  padding-left: 5px;
+}
+.ipad-title-box .ipad-new {
+  font-size: 12px;
+  color: #bf4800;
+}
+.ipad-image {
+  width: 653px;
+  height: 715px;
+}
+.ipad-image-fig {
+  width: 856px;
+  height: 813px;
+  background-size: 856px 813px;
+  background-repeat: no-repeat;
+  background-image: url(/img/apple/ipad_10_2__7yowwyyrbmaa_large.jpg);
+  position: relative;
+  left: 50%;
+  margin-left: -350px;
+  margin-top: -98px;
+}
+.ipad-title {
+  font-size: 56px;
+}
+.ipad-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  z-index: 10;
+  width: 326px;
+  height: 515px;
+}
+.ipad-price-more {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  border: none;
+  margin: 12px 0;
+  width: 85.7px;
+}
+.ipad-box {
+  border-bottom: 13px solid #f5f5f7;
+}
+
+/* section ipad air */
+
+.ipad-air-wrap {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.ipad-air-container {
+  width: 980px;
+  height: 715px;
+  margin: 0 auto;
+}
+.ipad-air-epx {
+  font-size: 20px;
+  font-weight: 550;
+}
+.ipad-air-price {
+  margin-top: 20px;
+  display: block;
+}
+.ipad-air-more {
+  color: #0066cc;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.ipad-air-more::after {
+  content: ">";
+  padding-left: 5px;
+}
+.ipad-air-title {
+  font-size: 56px;
+}
+.ipad-air-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  z-index: 10;
+  width: 326px;
+  height: 515px;
+}
+.ipad-air-price-more {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  border: none;
+  margin: 12px 0;
+  width: 85.7px;
+}
+.ipad-air-box {
+  border-bottom: 13px solid #f5f5f7;
+}
+.ipad-air-fig {
+  width: 519px;
+  height: 619px;
+  background-image: url(/img/apple/ipad_air__d794tkovmk02_large.jpg);
+}
+
+/* section ipad-pro */
+.ipad-pro-box {
+  padding-top: 78px;
+  padding-bottom: 71px;
+}
+.ipad-pro-wrap {
+  display: flex;
+  align-items: center;
+  width: 980px;
+  height: 598px;
+}
+.ipad-pro-container {
+  width: 980px;
+  height: 598px;
+  margin: 0 auto;
+}
+.ipad-pro-epx {
+  font-size: 20px;
+  font-weight: 550;
+}
+.ipad-pro-price {
+  margin-top: 20px;
+  display: block;
+}
+.ipad-pro-more {
+  color: #0066cc;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.ipad-pro-more::after {
+  content: ">";
+  padding-left: 5px;
+}
+.ipad-pro-title {
+  font-size: 56px;
+}
+.ipad-pro-title-wrap {
+  width: 326px;
+  height: 598px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ipad-pro-title-box {
+  text-align: center;
+  justify-content: center;
+  z-index: 100;
+  margin-top: -130px;
+}
+.ipad-pro-price-more {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  border: none;
+  margin: 12px 0;
+  width: 85.7px;
+}
+.ipad-pro-box {
+  border-bottom: 13px solid #f5f5f7;
+}
+.ipad-pro-image {
+  width: 326.6px;
+  height: 598px;
+  margin-left: 100.3px;
+}
+.ipad-pro-image-fig {
+  width: 1335px;
+  height: 598px;
+  background-repeat: no-repeat;
+  background-image: url(/img/apple/ipad_pro_hero__bh3eq6sqfjw2_large.jpg);
+  position: relative;
+}
+
+/* 그리드 */
+
+.compare-grid-wrap {
+  background-color: #f5f5f7;
+}
+.question {
+  text-align: center;
+  font-size: 46px;
+  padding-top: 115px;
+}
+.compare-grid-wrapper {
+  width: 1380px;
+  height: 1693px;
+  margin: 0 auto;
+  background-color: white;
+}
+.compare-grid {
+  padding-top: 68px;
+  padding-bottom: 73px;
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 38px;
+  grid-column-gap: 34px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas:
+    "ipad-pro-box ipad-air-box ipad-compare-box ipad-mini-box"
+    "ipad-pro-display-box ipad-air-display-box ipad-display-box ipad-mini-display-box"
+    "ipad-pro-chip-box ipad-air-chip-box ipad-chip-box ipad-mini-chip-box"
+    "ipad-pro-usb-box ipad-air-usb-box ipad-usb-box ipad-mini-usb-box"
+    "ipad-pro-5g-box ipad-air-4g-box ipad-4g-box ipad-mini-5g-box "
+    "ipad-pro-pencil-compare-box ipad-air-pencil-compare-box ipad-pencil-compare-box ipad-mini-pencil-compare-box"
+    "ipad-pro-keyboard-compare-box ipad-air-keyboard-compare-box ipad-keyboard-compare-box ipad-mini-keyboard-compare-box";
+}
+.compare-grid {
+  text-align: center;
+  color: #1d1d1f;
+  font-weight: 350;
+  font-size: 14px;
+}
+
+.ipad-relative {
+  position: relative;
+}
+.compare-grid .new {
+  font-size: 12px;
+  color: #bf4800;
+  position: absolute;
+  top: 53%;
+}
+.ipad-img-wrap {
+  width: 210px;
+  height: 214px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.display-title {
+  margin-bottom: 6px;
+}
+
+. .apple-pro-switch,
+.apple-air-switch,
+.apple-ipad-switch,
+.apple-mini-switch {
+  margin-top: 9px;
+  margin-bottom: 31px;
+}
+
+.ipad-pro-compare,
+.ipad-air-compare,
+.ipad-compare,
+.ipad-mini-compare {
+  padding-bottom: 32px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.ipad-pro-keyboard-compare,
+.ipad-air-keyboard-compare,
+.ipad-keyboard-compare,
+.ipad-mini-keyboard-compare {
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.compare-exp {
+  margin-top: 6px;
+}
+
+.compare-price {
+  margin-top: 10px;
+}
+
+.compare-more {
+  margin-top: 13px;
+}
+
+.compare-grid button {
+  margin-top: 7px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 11px;
+  line-height: 1.17648;
+  font-weight: 300;
+  min-width: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  border: none;
+}
+.ipad-pro-compare {
+  grid-area: ipad-pro-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-display {
+  grid-area: ipad-pro-display-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-chip {
+  grid-area: ipad-pro-chip-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-usb {
+  grid-area: ipad-pro-usb-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-5g {
+  grid-area: ipad-pro-5g-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-pencil-compare {
+  grid-area: ipad-pro-pencil-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pro-keyboard-compare {
+  grid-area: ipad-pro-keyboard-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipad-air-compare {
+  grid-area: ipad-air-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-display {
+  grid-area: ipad-air-display-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-chip {
+  grid-area: ipad-air-chip-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-usb {
+  grid-area: ipad-air-usb-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-4g {
+  grid-area: ipad-air-4g-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-pencil-compare {
+  grid-area: ipad-air-pencil-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-air-keyboard-compare {
+  grid-area: ipad-air-keyboard-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipad-compare {
+  grid-area: ipad-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-display-compare {
+  grid-area: ipad-display-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-chip {
+  grid-area: ipad-chip-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-usb {
+  grid-area: ipad-usb-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-4g {
+  grid-area: ipad-4g-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-pencil-compare {
+  grid-area: ipad-pencil-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-keyboard-compare {
+  grid-area: ipad-keyboard-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-compare {
+  grid-area: ipad-mini-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-display-compare {
+  grid-area: ipad-mini-display-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-chip {
+  grid-area: ipad-mini-chip-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-usb {
+  grid-area: ipad-mini-usb-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-5g {
+  grid-area: ipad-mini-5g-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-pencil-compare {
+  grid-area: ipad-mini-pencil-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ipad-mini-keyboard-compare {
+  grid-area: ipad-mini-keyboard-compare-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* pro */
+.apple-pro-switch {
+  background-image: url(/img/apple/compare_ipad_pro_swatches__bxn5nqwduk9y_large.jpg);
+  width: 32px;
+  height: 14px;
+}
+.ipad-pro-chip-fig {
+  background-image: url(/img/apple/compare_m1_chip__ev9f5zgvwo02_large.png);
+  width: 38px;
+  height: 38px;
+}
+.ipad-pro-usb-fig {
+  background-image: url(/img/apple/compare_usbc_thunderbolt__fuat6j3gyc2u_large.png);
+  width: 41px;
+  height: 22px;
+}
+.ipad-pro-5g-fig {
+  background-image: url(/img/apple/compare_cellular_5g__gck9kjr82ci2_large.png);
+  width: 48px;
+  height: 35px;
+}
+.ipad-air-pecil-compare-fig,
+.ipad-pecil-compare-fig,
+.ipad-mini-pecil-compare-fig {
+  background-image: url(/img/apple/compare_pencil__2ii95qsgy0y6_large.png);
+  width: 62px;
+  height: 6px;
+}
+.ipad-pro-keyboard-compare-fig {
+  background-image: url(/img/apple/compare_magic_keyboard__cr367s50ehkm_large.png);
+  width: 68px;
+  height: 49px;
+}
+
+/* air */
+.apple-air-switch {
+  background-image: url(/img/apple/compare_ipad_air_swatches__dagugd9h3nsm_large.jpg);
+  width: 85px;
+  height: 14px;
+}
+.ipad-air-chip-fig {
+  background-image: url(/img/apple/compare_a14_chip__eflvurt7ywia_large.png);
+  width: 38px;
+  height: 38px;
+}
+.ipad-air-usb-fig {
+  background-image: url(/img/apple/compare_usbc__gnv70qm6mcuq_large.png);
+  width: 32px;
+  height: 22px;
+}
+.ipad-air-4g-fig {
+  background-image: url(/img/apple/compare_cellular_4g__emz9l1sj4yye_large.png);
+  width: 48px;
+  height: 35px;
+}
+.ipad-air-keyboard-compare-fig {
+  background-image: url(/img/apple/compare_magic_keyboard__cr367s50ehkm_large.png);
+  width: 68px;
+  height: 49px;
+}
+
+/* ipad */
+.apple-ipad-switch {
+  background-image: url(/img/apple/compare_ipad_10_2_swatches__b77m5o9rqjhy_large.jpg);
+  width: 32px;
+  height: 14px;
+}
+.ipad-chip-fig {
+  background-image: url(/img/apple/compare_a13_chip__f2yibwat6sya_large.png);
+  width: 38px;
+  height: 38px;
+}
+.ipad-usb-fig {
+  background-image: url(/img/apple/compare_lightning__drp7mpo3oyie_large.png);
+  width: 32px;
+  height: 22px;
+}
+.ipad-4g-fig {
+  background-image: url(/img/apple/compare_cellular_4g__emz9l1sj4yye_large.png);
+  width: 48px;
+  height: 35px;
+}
+.ipad-keyboard-compare-fig {
+  background-image: url(/img/apple/compare_smart_keyboard__gh56kiymgfam_large.png);
+  width: 68px;
+  height: 49px;
+}
+
+/* mini */
+.apple-mini-switch {
+  background-image: url(/img/apple/compare_ipad_mini_swatches__fdzgy88hh6ai_large.jpg);
+  width: 68px;
+  height: 14px;
+}
+.ipad-mini-chip-fig {
+  background-image: url(/img/apple/compare_a15_chip__c4a0mtst408y_large.png);
+  width: 38px;
+  height: 38px;
+}
+.ipad-mini-usb-fig {
+  background-image: url(/img/apple/compare_usbc__gnv70qm6mcuq_large.png);
+  width: 32px;
+  height: 22px;
+}
+.ipad-mini-5g-fig {
+  background-image: url(/img/apple/compare_cellular_5g__gck9kjr82ci2_large.png);
+  width: 48px;
+  height: 35px;
+}
+.ipad-mini-keyboard-compare-fig {
+  background-image: url(/img/apple/compare_bluetooth_keyboard__fsfc35t22vqu_large.png);
+  width: 68px;
+  height: 49px;
+}
+
+.grid-links-wrap {
+  display: flex;
+  justify-content: center;
+}
+.compare-grid-links {
+  display: flex;
+  color: #0066cc;
+  font-size: 19px;
+}
+
+.display-exp1 {
+  line-height: 20px;
+}
+
+.ipad-pro-chip fi {
+  margin:
+}

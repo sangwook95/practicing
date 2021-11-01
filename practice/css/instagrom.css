@@ -1,0 +1,436 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    color : inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+/* root */
+
+:root {
+    --circle-color: indianred;
+}
+
+/* contents 구조잡기 */
+
+.wrap {
+    width: 840px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.right {
+    width: 300px;   
+}
+
+.main {
+    width: 520px;
+}
+
+.background {
+    width: 100%;
+    padding-top: 50px;
+}
+
+/* header */
+.gnb {
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+    justify-content: center;
+    height: 50px;
+}
+
+nav {
+    width: 840px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.input-box {
+    flex-grow: 1;
+}
+
+input {
+    height: 23px;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    width: 230px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+input:focus {
+    outline: 0;
+    text-align: unset;
+    padding-left: 20px;
+
+}
+
+
+nav .icon {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+nav .icon li {
+    width: 30px;
+}
+
+nav .icon li img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+/* face-container */
+
+.face-container {
+    display: flex;
+    font-size: 13px;
+    margin: 20px 0;
+    border: 1px solid #dfdfdf;
+    height: 110px;
+    justify-content:space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.face-box div {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient( 45deg, yellow, red);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.face-box div img {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.face-box p {
+    margin-top: 5px;
+}
+
+/* time-line */
+
+.time-line {
+    background-color :white;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 25px;
+}
+
+.t-header {
+    height: 60px;
+    display: flex;
+    align-items: center;    
+}
+
+.t-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient( 45deg, yellow, red);
+    margin: 0 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t-profile img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.t-id {
+    width: 80%;
+}
+
+.t-more {
+    margin: 0 10px;
+}
+
+.t-content img {
+    width: 100%;
+    height: 500px;
+}
+
+.t-icon-bar {
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.t-icon-bar div:nth-child(3) {
+    width: 80%;;
+}
+
+.t-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* like-bar */
+
+.like-bar {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.face2 {
+    height: 20px;
+    width: 20px;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.like-bar span {
+    font-weight: bold;
+}
+
+.t-coment-box {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 13px;
+}
+
+.t-time {
+    font-size: 12px;
+    color: gray;
+}
+
+.coment-more {
+    color: gray;
+}
+
+.add-coment {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    border-top: 1px solid #dfdfdf;
+    height: 55px;
+    justify-content: space-around;
+    
+}
+
+.add-add {
+    width: 78%;
+}
+
+/* right */
+
+.right {
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 13x;
+}
+
+.acount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.acount-face {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient( 45deg, yellow, red);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acount-face img {
+    width: 36px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.id {
+    width: 60%;
+    margin-left: 8px;
+}
+
+.recommend {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommend p {
+    color: gray;
+}
+
+.recommend p:nth-child(2) {
+    color: black;
+    font-weight: 600;
+}
+
+.history-box {
+    margin-top: 15px;
+}
+
+.history {
+    margin-bottom: 20px;
+}
+
+.history .h-face {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient( 45deg, yellow, red);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history .h-face img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history span {
+    font-size: 10px;
+}
+
+.follow {
+    color: rgb(62, 62, 179);
+    font-size: 13px;
+}
+
+.index, .copyright {
+    color: gray;
+    font-size: 11px;
+}
+
+.index {
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.index ul {
+    display: flex;
+}
+
+.index ul li::after {
+    content: '\00B7';
+    margin: 0 .25em 0 .25em;
+}
+
+.index .content-none::after{
+    content: none;
+} 
+
+
+.copyright {
+    margin-top: 10px;
+}
+
+/* max-width: 992px */
+
+@media screen and (max-width:992px) {
+    .wrap {
+        width: 620px;
+        margin: 0 auto;
+    }
+
+    .main {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
+
+/* 상단 바 고정 */
+
+.gnb {
+    position: fixed;
+    z-index: 1;
+}
+
+/* 우측 side 고정 */
+
+.right {
+    position: fixed;
+    left: 54%;
+    float: right;
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+
+body {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+}
+
+header ul {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.nav li {
+    float: left;
+}
+.nav li:nth-child(4){
+    margin-top: 20px
+}
+.nav li:nth-child(7){
+    margin-top: 40px;
+}
+.nav li a{
+    display: block;
+    padding: 5px;
+}
+.nav li {
+    margin: 0 20px;
+}
+
+
+.main {
+    background-image: url(../img/picture01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+.main-box {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(248, 243, 233);
+    font-size: 15px;
+    width: 350px;
+    height: 200px;
+}
+.button-box {
+    display: inline-block;
+}
+.button-box button {
+    display: block;
+    float: left;
+    border: none;
+    background-color: rgb(250, 178, 90);
+    height: 40px;
+    width: 100px;
+    color: white;
+    cursor:pointer;
+}
+.button-box button:nth-child(1) {
+    background-color: white;
+    color: black;
+}
+.main-box p:nth-child(3) {
+    font-size: 13px;
+}
+
+.text {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+}
+
+.text-box {
+    display: inline-block;
+    margin: 60px 0;
+}
+
+.content-wrap {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.content {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 18px;
+}
+.content-box {
+    float: left;
+    margin: 10px 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px dotted #dfdfdf;
+}
+.content-box img {
+    display: inline-block;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #dfdfdf;
+}
+.footer-box {
+    display: inline-block;
+    overflow: hidden;
+}
+.footer-box .footer-box_text {
+    float: left;
+    margin-top: 80px;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 15px;
+}
+.footer-box .footer-box_img {
+    float: left;
+}
+
+
+
