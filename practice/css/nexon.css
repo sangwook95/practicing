@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header */
+
+.gnb-menu-logo {
+    background: transparent url(/img/nexon/sprite1.png) 0 0 no-repeat;
+    width: 18px;
+    height: 16px;
+    display: inline-block;
+    background-color: #17191d;
+}
+
+nav {
+    height: 62px;
+    display: flex;
+}
+
