@@ -3,6 +3,7 @@
   --nexon-initial-color: #ffffff;
   --section-background-color: #dfdfdf44;
   --section-width: 1280px;
+  --hover-color: #07f;
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap");
 
@@ -167,6 +168,8 @@ button {
 .main_video-button svg {
   width: 100%;
 }
+.main_video-button svg:hover {
+}
 
 /* banner bottom nav */
 
@@ -210,7 +213,6 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
 }
 .swiper-menu-box1 h3 {
   font-size: 13px;
@@ -244,8 +246,11 @@ button {
 .section1_header_left {
   font-size: 14px;
 }
-.section_header_left a {
-  display: block;
+.section1_header_left a {
+  transition-duration: 0.5s;
+}
+.section1_header_left a:hover {
+  color: var(--hover-color);
 }
 .section1_header_left a:first-child {
   margin-right: 26px;
@@ -256,6 +261,13 @@ button {
 .middle-game--background {
   width: 153px;
   height: 192px;
+  overflow: hidden;
+}
+.middle-game--background img {
+  transition-duration: 0.5s;
+}
+.middle-game--background img:hover {
+  width: 110%;
 }
 .section1_main {
   display: flex;
@@ -393,24 +405,40 @@ button {
   width: 20px;
   height: 20px;
   margin-right: 13px;
+  transition-duration: 0.5s;
+}
+.social-log-in-icon1:hover {
+  opacity: 0.6;
 }
 .social-log-in-icon2 {
   background: url("../img/nexon/set_login.png") no-repeat -1px -101px;
   width: 20px;
   height: 20px;
   margin-right: 13px;
+  transition-duration: 0.5s;
+}
+.social-log-in-icon2:hover {
+  opacity: 0.6;
 }
 .social-log-in-icon3 {
   background: url("../img/nexon/set_login.png") no-repeat -1px -151px;
   width: 20px;
   height: 20px;
   margin-right: 13px;
+  transition-duration: 0.5s;
+}
+.social-log-in-icon3:hover {
+  opacity: 0.6;
 }
 .social-log-in-icon4 {
   background: url("../img/nexon/set_login.png") no-repeat -1px -201px;
   width: 16px;
   height: 20px;
   margin-right: 13px;
+  transition-duration: 0.5s;
+}
+.social-log-in-icon4:hover {
+  opacity: 0.6;
 }
 .find-box {
   display: flex;
@@ -422,9 +450,23 @@ button {
 }
 .password-find {
   flex-grow: 1;
+  transition-duration: 0.5s;
+}
+.sign-up {
+  transition-duration: 0.5s;
+}
+.sign-up:hover {
+  color: var(--hover-color);
+}
+.password-find:hover {
+  color: var(--hover-color);
 }
 .id-find {
   margin-right: 20px;
+  transition-duration: 0.5s;
+}
+.id-find:hover {
+  color: var(--hover-color);
 }
 .adv-sign-up {
   width: 353px;
@@ -437,12 +479,22 @@ button {
   justify-content: center;
   display: flex;
 }
+.adv-sign-up p {
+  transition-duration: 0.5s;
+}
+.adv-sign-up p:hover {
+  color: var(--hover-color);
+}
 .add-icon {
   background: url(../img/nexon/sprite2.svg) no-repeat 0 -550px;
   width: 10px;
   height: 10px;
   margin-left: 5px;
   cursor: pointer;
+  transition-duration: 0.5s;
+}
+.add-icon:hover {
+  background-color: var(--hover-color);
 }
 .triangle {
   top: 286px;
@@ -569,7 +621,7 @@ button {
   cursor: pointer;
 }
 .second-type:hover {
-  background-color: blue;
+  background-color: var(--hover-color);
 }
 .total-header {
   display: flex;
@@ -625,7 +677,7 @@ button {
   transition-duration: 0.5s;
 }
 .type-inner-box li:hover {
-  color: blue;
+  color: var(--hover-color);
 }
 .type-inner-box li:first-child {
   margin-left: 40px;
@@ -664,10 +716,21 @@ button {
   background-color: var(--nexon-initial-color);
   margin-right: 24px;
   margin-bottom: 60px;
+  transition-duration: 0.4s;
+}
+.nexon-game li:hover {
+  box-shadow: 0 0 16px 0 rgb(0 0 0 / 16%);
+}
+.nexon-game li img:hover {
+  width: 110%;
+}
+.nexon-game li img {
+  transition-duration: 0.5s;
 }
 .nexon-game-img {
   width: 302px;
   height: 200px;
+  overflow: hidden;
 }
 .nexon-game-img img {
   width: 100%;
@@ -716,6 +779,8 @@ footer {
   width: 70px;
   height: 25px;
   display: inline-block;
+  margin-left: 40px;
+  margin-top: 25px;
 }
 .footer-header {
   display: flex;
@@ -725,10 +790,123 @@ footer {
   font-size: 12px;
   font-weight: bolder;
   border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+  justify-content: space-between;
+}
+.social-box {
+  display: flex;
+  margin-right: 45px;
+}
+.youtube {
+  background: url(../img/nexon/set_login.png) no-repeat -1px -51px;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+.naver {
+  background: url(../img/nexon/set_login.png) no-repeat -1px -151px;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+.facebook {
+  background: url(../img/nexon/set_login.png) no-repeat -1px -101px;
+  width: 20px;
+  height: 20px;
 }
 .footer-header span {
   display: block;
 }
 .social-box img {
   width: 80%;
+}
+.footer-nav1-wrap {
+  position: relative;
+}
+.footer-nav1 {
+  overflow: hidden;
+  height: 48px;
+  font-size: 12px;
+  color: #f8f9fab3;
+  padding-top: 31px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+.footer-nav1 li {
+  float: left;
+}
+.footer-nav1 li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  margin: 0 16px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+.footer-nav1 li:last-child::after {
+  content: none;
+}
+.korea-box span {
+  display: block;
+}
+.korea-box {
+  background-color: #393a3c;
+  width: 140px;
+  height: 34px;
+  font-size: 12px;
+  color: #f8f9facc;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 11px;
+  right: 45px;
+}
+.language-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 13px;
+  opacity: 0.7;
+}
+.language-icon img {
+  width: 100%;
+}
+.korea-text {
+  margin-left: 13px;
+  flex-grow: 1;
+}
+.footer-nav2 {
+  overflow: hidden;
+  height: 48px;
+  font-size: 12px;
+  color: #f8f9fab3;
+  padding-top: 14px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+.footer-nav2 li {
+  float: left;
+}
+.footer-nav2 li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  margin: 0 16px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+.footer-nav2 li:last-child::after {
+  content: none;
+}
+.address {
+  color: #f8f9fa4d;
+  font-size: 11px;
+  padding-left: 40px;
+}
+.copyright {
+  color: #f8f9fa4d;
+  font-size: 11px;
+  padding-left: 40px;
+}
+.confirm {
+  text-decoration: underline;
 }
