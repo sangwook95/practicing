@@ -92,7 +92,7 @@ button {
   position: relative;
 }
 .main_video-box {
-  background-image: url(/img/nexon/sddefault.webp);
+  background-image: url(../img/nexon/sddefault.webp);
   width: 640px;
   height: 360px;
   background-position: center;
