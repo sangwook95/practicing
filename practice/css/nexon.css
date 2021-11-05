@@ -756,8 +756,8 @@ button {
 .nexon-game li:hover {
   box-shadow: 0 0 16px 0 rgb(0 0 0 / 16%);
 }
-.nexon-game li img:hover {
-  width: 110%;
+.nexon-game li:hover > a > div > img {
+  transform: scale(1.1, 1.1);
 }
 .nexon-game li img {
   transition-duration: 0.5s;
@@ -836,17 +836,20 @@ footer {
   width: 20px;
   height: 20px;
   margin-right: 2px;
+  cursor: pointer;
 }
 .naver {
   background: url(../img/nexon/set_login.png) no-repeat -1px -151px;
   width: 20px;
   height: 20px;
   margin-right: 2px;
+  cursor: pointer;
 }
 .facebook {
   background: url(../img/nexon/set_login.png) no-repeat -1px -101px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .footer-header span {
   display: block;
