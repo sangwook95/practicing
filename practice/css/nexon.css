@@ -305,8 +305,17 @@ button {
 .middle-game--background img {
   transition-duration: 0.5s;
 }
-.middle-game--background img:hover {
-  width: 110%;
+.middle-game-box1:hover .middle-game--background img {
+  transform: scale(1.1, 1.1);
+}
+.middle-game-box2:hover .middle-game--background img {
+  transform: scale(1.1, 1.1);
+}
+.middle-game-box3:hover .middle-game--background img {
+  transform: scale(1.1, 1.1);
+}
+.middle-game-box4:hover .middle-game--background img {
+  transform: scale(1.1, 1.1);
 }
 .section1_main {
   display: flex;
