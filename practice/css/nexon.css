@@ -196,6 +196,10 @@ button {
   padding-left: 12px;
   position: absolute;
   bottom: 5px;
+  transition-duration: 0.5s;
+}
+.next-view:hover {
+  background-color: #17171777;
 }
 .youtube-main-logo {
   width: 72px;
@@ -964,4 +968,31 @@ footer {
 }
 .footer-nav2 li a:hover {
   color: var(--hover-color);
+}
+.fixed-box {
+  width: 260px;
+  height: 289px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.fixed-img img {
+  width: 100%;
+}
+.fixed-img {
+  width: 260px;
+  height: 190px;
+}
+.fixed-content-box h2 {
+  font-size: 14px;
+}
+.fixed-content-box h1 {
+  font-size: 14px;
+}
+.fixed-content-box p {
+  font-size: 12px;
+}
+.fixed-genre-info p {
+  font-size: 12px;
+  color: #9fa1a7;
 }
