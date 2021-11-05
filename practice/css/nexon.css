@@ -63,6 +63,13 @@ nav {
   font-size: 14px;
   font-weight: 600;
 }
+.sign-up-text {
+  margin-left: 10px;
+  transition-duration: 0.5s;
+}
+.sign-up-text:hover {
+  color: var(--hover-color);
+}
 
 button {
   margin-left: 10px;
@@ -115,7 +122,6 @@ button {
   top: 14.28%;
   right: 17%;
 }
-
 /* main_video-box */
 .video-box_header {
   position: relative;
@@ -180,7 +186,24 @@ button {
 .main_video-button svg {
   width: 100%;
 }
-.main_video-button svg:hover {
+.next-view {
+  background-color: #171717cc;
+  width: 209px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 12px;
+  position: absolute;
+  bottom: 5px;
+}
+.youtube-main-logo {
+  width: 72px;
+  height: 16px;
+  display: inline-block;
+}
+.youtube-main-logo svg {
+  width: 100%;
 }
 
 /* banner bottom nav */
@@ -871,6 +894,11 @@ footer {
   position: absolute;
   top: 11px;
   right: 45px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.korea-box:hover {
+  background-color: var(--hover-color);
 }
 .language-icon {
   width: 18px;
@@ -921,4 +949,16 @@ footer {
 }
 .confirm {
   text-decoration: underline;
+}
+.footer-nav1 li a {
+  transition-duration: 0.5s;
+}
+.footer-nav1 li a:hover {
+  color: var(--hover-color);
+}
+.footer-nav2 li a {
+  transition-duration: 0.5s;
+}
+.footer-nav2 li a:hover {
+  color: var(--hover-color);
 }
