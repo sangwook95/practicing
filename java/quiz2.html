@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <script>
+        var orangeNum = parseInt(prompt('당신이 가지고 있는 오렌지의 개수는 몇입니까?'));
+        var orangeBox = parseInt(orangeNum/10);
+        var orangeBox2 = orangeBox+1;
+
+        if(orangeNum % 10 == 0) {
+            alert('오렌지의 개수의 박스' + orangeBox + '개입니다');
+        }
+        else {
+            alert('오랜지의 개수의 박스는' + orangeBox2 + '개입니다');
+        }
+    </script>
+    -->
+
+    <script>
+        
+        var orange = parseInt(prompt('오렌지를 몇개 가지고 계신가요?'));
+        var basket = parseInt(orange / 10);
+
+        if(orange%10!==0) {
+            basket++;
+        }
+        alert(basket);
+
+
+
+        
+        <!--
+            alert(parseInt((orange+9)/10));
+            -->
+        
+    </script>
+
+</body>
+</html>
