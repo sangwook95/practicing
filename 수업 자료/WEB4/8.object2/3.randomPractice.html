@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP & DOWN</title>
+</head>
+<body>
+    <script>
+        let input,count = 5;
+        let answer = Math.floor(Math.random()*100+1);
+        let result;
+
+        while(true){
+            input = parseInt(prompt("1부터 100 사이의 숫자를 입력해주세요", "남은기회 " + count-- ))
+
+            if ( answer === input ){
+                alert("정답입니다!");
+                result = true;
+                break;
+            }
+            else if(count === 0 ){
+                alert("실패입니다..");
+                result = false;
+                break;
+            }else if( input > answer ){
+                alert("Down");
+            }else{
+                alert("Up");
+            }
+        }
+        if( result ){
+            document.write('축하합니다!');
+        }else{
+            document.write('정답은 ' + answer + "입니다...")
+        }
+    </script>
+</body>
+</html>

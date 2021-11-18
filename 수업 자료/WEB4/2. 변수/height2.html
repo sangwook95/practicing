@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>기준 : 135cm</span>
+    <p>
+        어린이의 키는 
+        <span class="child-height"></span>
+        cm 입니다 기준과 
+        <span class="diff-height"></span>
+        cm 차이납니다.
+    </p>
+    <script>
+        var childHeight = document.querySelector('.child-height');
+        var diffHeight = document.querySelector('.diff-height');
+
+        var input = prompt("어린이의 키를 입력하세요", "숫자만 입력하세요");
+
+        childHeight.innerHTML = input;
+        diffHeight.innerHTML = input - 135;
+    </script>
+</body>
+</html>

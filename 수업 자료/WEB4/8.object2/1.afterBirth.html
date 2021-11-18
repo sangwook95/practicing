@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>당신이 태어난 뒤로</p>
+    <p>
+        <span class="min"></span>분이 지났습니다
+    </p>
+    <script>
+        let birth = new Date(prompt("생년월일을 입력해주세요", "YYYY-MM-DD"));
+        //생년월일 입력받아 인스턴스 생성
+        let now = new Date();
+        //기본값으로 선언하면 위 코드가 실행된 순간의 시간정보가 저장된다
+        let afterBirthToMin = Math.round(((now.getTime() - birth.getTime())/1000/60));
+        // Math.round() 메소드 이용해서 소수점 절삭, 밀리초를 1000으로 나누면 초, 초를 60으로 나누면 분이된다
+
+        document.querySelector('.min').innerText = afterBirthToMin;
+        //innerText 이용하면 태그 내의 값을 텍스트로 변경해준다. 태그는 적용되지 않는다!
+
+    </script>
+</body>
+</html>

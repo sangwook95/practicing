@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+        }
+        li{
+            border: 1px solid black;
+            list-style: none;
+            padding: 10px;
+        }
+
+        .div-color{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            opacity: .7;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li onclick="changeDivColor('green')">green</li>
+        <li onclick="changeDivColor('yellow')">yellow</li>
+        <li onclick="changeDivColor('red')">red</li>
+    </ul>
+    <div class="div-color">
+        위의 버튼을 누르면 색이 바뀝니다
+    </span>
+    <script>
+        function changeDivColor(color){
+            document.querySelector('.div-color').style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+        }
+        li{
+            border: 1px solid black;
+            list-style: none;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li onclick="changeFontSize('14pt')">14pt</li>
+        <li onclick="changeFontSize('20pt')">20pt</li>
+        <li onclick="changeFontSize('26pt')">26pt</li>
+    </ul>
+    <span class="font-size">
+        위의 버튼을 누르면 글씨 크기가 변경됩니다
+    </span>
+    <script>
+        function changeFontSize(size){
+            document.querySelector('.font-size').style.fontSize=size;
+        }
+    </script>
+</body>
+</html>

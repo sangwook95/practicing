@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let now = new Date();
+
+        document.write('현재 시간은' + now.getHours() + '시' +  now.getMinutes() + '분 입니다');
+
+        */
+
+        /*
+        let student = new Array('홍길동', '김철수');
+        let student2 = ['홍길동','김철수', '안철수'];
+        let studentEmpty = new Array(5);
+        
+        let studentAll = student.concat(student2);
+        
+        let string = student.join();
+        
+        student2.push('문재인', '이명박');
+        student2.unshift('박근혜');
+        student.unshift('박정희');
+        let pick = student.pop()
+
+        document.write(pick)
+        document.write('<br>');
+        document.write(student.length);
+        document.write('<br>');
+        document.write(studentAll);
+        document.write(string);
+        document.write('<br>');
+        document.write(student2.join('-'));
+
+        document.write('<br>');
+        let splicePractice = [1,2,3,4,5,6,7,8,9,10,11,12];
+        splicePractice.splice(5,2,9); // 인수 첫번째 - index 5 초과부터 , 인수 두번째 - 2개를 빼온다, 인수 3번째 빼온자리에 9를 넣는다
+
+        let newSlice1 = splicePractice.slice(3,6) // 인수 첫번째 - index 3번째이상부터, 두번째 인수 - index6까지 자르기 
+        document.write(splicePractice);
+        document.write('<br>');
+        document.write(newSlice1);
+        
+        */
+
+        let now = new Date(); // 현재 시간 정보를 가져온다 
+        let day = new Date('2021-09-20') // 특정한 날짜로 지정 가능
+        let day2 = '2021-09-20';
+        day.getDate();
+        day2.slice(8); // 값은 같으나 day2에는 문자열만 지정이 되었기 때문에 문자열 slice가 적용 된것.
+        let dayAndTime = new Date('2021-09-20T19:54:30'); //T를 넣어주면 시간까지 설정 가능, 마지막 30에 Z를 넣어주면 국제 표준시로도 사용 가능
+        console.log(dayAndTime);
+
+        
+        getFullYear()
+        getMonth() // 0부터 시작 ex) 12월 = 값 11로표기
+        getDate()
+        getDay()
+        getTime() // 1970년 1월 1일부터 현재까지 흐른 시간을 밀리초로 표시
+        getHour()
+        getMinuites()
+        getSeconds()
+        getMilliseconds()
+
+        setFullYear()
+        setMonth()
+        setDate()
+        setDay()
+        setTime()
+        setHours()
+        setMinuites()
+        setSeconds()
+        setMilliseconds()
+    </script>
+</body>
+</html>

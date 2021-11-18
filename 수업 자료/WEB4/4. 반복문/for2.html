@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* div{
+            float: left;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+ 
+        } */
+
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        
+        .inner{
+            float: left;
+            margin: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        
+        //2중 반복문을 이용해 출력 가능하다
+
+        for(var j = 2 ; j <= 9 ; j++ ){
+            document.write("<div>");
+            for(var k = 1 ; k<=9 ; k++){
+                document.write(j + "x" + k + "=" + j*k + "<br>");
+            }
+            document.write("</div>");
+        }
+        for(var j = 12 ; j <= 19 ; j++ ){
+            document.write("<div class='inner'>");
+            for(var k = 1 ; k<=9 ; k++){
+                document.write(j + "x" + k + "=" + j*k + "<br>");
+            }
+            document.write("</div>");
+        }
+        document.write("</div>");
+
+
+        document.write("<div class='container'>")
+
+        //3중 반복문도 이용 가능하다!
+        for(var i = 0 ; i <= 10 ; i ++){
+            for(var j = 2 ; j <= 9 ; j++ ){
+                document.write("<div class='inner'>");
+                for(var k = 1 ; k<=9 ; k++){
+                    document.write((i*10+j) + "x" + k + "=" + (i*10+j)*k + "<br>");
+                }
+                document.write("</div>");
+            }
+        }
+    </script>
+</body>
+</html>

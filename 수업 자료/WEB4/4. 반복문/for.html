@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1부터 10까지 노가다로 더하기
+        var sum=0;
+
+        sum=sum+1;
+        sum=sum+2;
+        sum=sum+3;
+        sum=sum+4;
+        sum=sum+5;
+        sum=sum+6;
+        sum=sum+7;
+        sum=sum+8;
+        sum=sum+9;
+        sum+=10;
+
+        var sum2=0;
+
+        //반복문을 사용하면 편리하게 작성할 수 있다!
+        for(var i = 1;i <= 10; i++){
+            // sum2=sum2+i;
+            sum2+=i;
+        }
+
+        //같은 값이 출력된다.
+        document.write(sum + "<br>");
+        document.write(sum2 + "<br>");
+
+        var sum3=0;
+
+        for(var i = 11;i <= 20; i++){
+            // sum2=sum2+i;
+            sum3+=i;
+        }
+        //11부터 20까지 더해진다.
+        document.write(sum3 + "<br>");
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요 당신은</h1>
+    <span class="bloodtype"></span>형이시군요?
+
+    <script>
+        var bloodtype = document.querySelector(".bloodtype");
+
+        alert("어서오세요 반갑습니다");
+        var inputText = prompt("당신의 혈액형은 무엇입니까?", "대문자로 입력하세요");
+        bloodtype.innerHTML = inputText;
+        
+        alert(bloodtype);
+        // bloodtype.innerHTML = inputText;
+
+
+    </script>
+</body>
+</html>

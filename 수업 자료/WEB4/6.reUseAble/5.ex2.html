@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <span class="font-color">
+        글씨를 누르면 색깔이 변합니다
+    </span>
+    <script>
+        let fontSizeConvert = document.querySelector('.font-color');
+        fontSizeConvert.onclick = colorChange; //괄호 넣으면 안된다!!
+
+        function colorChange(){
+            if(fontSizeConvert.style.color==='blue')
+                fontSizeConvert.style.color='black';
+            else
+                fontSizeConvert.style.color='blue';
+        }
+    </script>
+</body>
+</html>

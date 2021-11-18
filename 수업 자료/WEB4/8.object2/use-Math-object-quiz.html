@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let testScore = new Array(parseInt(prompt("이번 시험은 몇 개 과목인가요?")));
+
+        makeScore(testScore);
+
+        let average = calcAverage(testScore);
+        
+
+
+        let max = Math.max(...testScore);
+        let min = Math.min(...testScore);
+        document.write("최고점수는 " + max + "점, 최저점수는 " + min + "점, 평균은 " + Math.floor(average) + "점 입니다");
+
+
+        // let max = 0 , min = 100;
+
+        // for( let i = 0 ; i < testScore.length ; i ++ ){
+        //     if( testScore[i] > max)
+        //         max = testScore[i];
+
+        //     if( testScore[i] < min )
+        //         min = testScore[i]
+        // }
+
+
+
+        
+        
+
+
+        function makeScore(array){ //시험점수 랜덤으로 만들어주는 함수
+            for( let i = 0 ; i < array.length ; i++ ){
+                array[i] = Math.floor(Math.random()*101);
+            }
+        }
+        function calcAverage(array){ // 평균 구해주는 함수
+            let sum=0;
+            for( let i = 0 ; i < array.length ; i++ ){
+                sum+=array[i];
+            }
+            return sum/array.length;
+        }
+    </script>
+</body>
+</html>

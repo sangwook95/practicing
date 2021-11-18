@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        당신의 나이는
+    </h1>
+    <span class="age"></span>세 입니다
+
+    <script>
+        var ageSpan = document.querySelector('.age');
+        var correntYear = prompt("올해는 몇년도 입니까?", "숫자만 입력하세요")
+        var birthYear = prompt("당신은 몇년도에 태어났습니까?", "숫자만 입력하세요")
+
+        var age = correntYear - birthYear + 1;
+
+        ageSpan.innerHTML = age;
+
+    </script>
+</body>
+</html>
