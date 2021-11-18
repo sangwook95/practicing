@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+        }
+        li {
+            border: 1px solid black;
+            list-style: none;
+            padding: 10px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    <ul>
+        <li onclick='changeFontSize("14pt")'></li>
+        <li onclick='changeFontSize("12pt")'></li>
+        <li onclick='changeFontSize("13pt")'></li>
+    </ul>
+    <span class='font-size'>
+        위의 버튼을 누르면 글씨가 변경됩니다.
+    </span>
+    <script>
+        function changeFontSize(size) {
+            document.querySelector('.font-size').style.fontSize=size
+        }
+    </script>
+    -->
+    <!--
+    <ul>
+        <li onclick='changeBackgroundColor("green")'>green</li>
+        <li onclick='changeBackgroundColor("yellow")'>yellow</li>
+        <li onclick='changeBackgroundColor("red")'>red</li>
+    </ul>
+    <div class='font-color'>
+        
+    </div>
+    <script>
+        function changeBackgroundColor(color) {
+            document.querySelector('.font-color').style.backgroundColor=color
+        }
+    </script>
+    -->
+
+    <span class= 'font-color'>글씨를 누르면 색깔이 변합니다</span>
+
+    <script>
+        let fontSizeConvert = document.querySelector('.font-color');
+        fontSizeConvert.onclick = colorChange; //괄호를 넣으면 안된다!!!
+        
+        function colorChange() {
+            if(fontSizeConvert.style.color==='blue')
+                fontSizeConvert.style.color='black';
+            else
+                fontSizeConvert.style.color='blue';
+        }
+    </script>
+    
+
+</body>
+</html>

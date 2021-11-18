@@ -76,7 +76,57 @@
     }
 
    
+        /*
+        let userNum1 = parseInt(prompt('첫번째 숫자를 입력하시오'));
+        let userNum2 = parseInt(prompt('두번째 숫자를 입력하시오'));
 
+
+        function plus(a,b) {
+            return a*b //break;문과 같은 기능 return을 만나면 함수를 끝냄
+        }
+        
+        let multi = plus(userNum1,userNum2)
+
+        alert('두 수를 곱한 값은' + multi + '입니다');
+
+        // 일단 스크립트 해석기가 전체를 훑어옴 - function을 먼저 분석/해석(함수는 스크립트 문서 어디에 와도 상관 없다) - 위에서 부터 실행 - 함수를 만나면 해석해두었던 함수를 인수를 더해 값을 실행 
+        */
+
+        /*
+        let userNum1 = parseInt(prompt('첫번째 숫자를 입력하시오'));
+        let userNum2 = parseInt(prompt('두번째 숫자를 입력하시오'));
+
+
+        function plus(a,b = 5) {
+            return a*b //break;문과 같은 기능 return을 만나면 함수를 끝냄
+        }
+        
+        let multi = plus(userNum1);
+
+        alert('두 수를 곱한 값은' + multi + '입니다'); // plus b =5 는 기본값이고 함수에 실제로 인수를 넘겨줄 때는 2개를 넘겨주면 기본값을 무시하고 지정한 값으로 계산
+        */
+
+        /*
+        let multi = function() { //익명함수 - function () 기본형 함수가 많아지면 스크립트 해석기에서 먼저 읽는 함수가 많아지므로 조금 버벅일 수 있다
+            alert('곱하기!')
+        };
+
+        multi();  
+        
+        */
+
+        /*
+        (function(){ //즉시실행되는 함수 
+            alert('즉시실행 함수');
+        }())
+
+        const hello = () => { alert ('안녕')};
+        hello();
+
+        const hello = () => alert ('안녕'); //한줄일때는 중괄호 생략 가능 return도 같이 적용
+        hello();
+
+        */
 
 
     </script>
