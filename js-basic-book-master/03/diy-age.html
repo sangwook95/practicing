@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>나이 계산하기</title>
+	<link rel="stylesheet" href="css/age.css">
+</head>
+<body>	
+	<button class="btn" onclick="cal()">나이 계산하기</button>
+	<div id="result" class="show">(결과 값 표시)</div> 
+	<script>
+		function cal() {
+			var year = 2021;
+			var birthYear = prompt('태어난 연도를 입력하시오.' , 'YYYY');
+			var age = year - birthYear + 1;
+			document.querySelector('.show').innerHTML = '당신이 태어난 연도는' + age + '세 입니다.';
+
+		}
+	</script>
+</body>
+</html>
