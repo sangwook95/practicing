@@ -74,7 +74,6 @@
                 <li class="slide content2">2</li>
                 <li class="slide content3">3</li>
                 <li class="slide content4">4</li>
-                <li class="slide content5">5</li>
             </ul>
         </div>
         <div class="buttons">
@@ -139,7 +138,14 @@
                 
                 index--;
                 moveSlide(1000);
-
+                
+                clearButton();
+                if(index>0) {
+                    buttonArray[index-1].style.backgroundColor = 'gray';
+                }
+                else{
+                buttonArray[index+3].style.backgroundColor = 'grey';
+                }
                 setTimeout(function(){
                     if(index===0){
                         index=sliderLength;
@@ -156,6 +162,16 @@
                 
                 index++;
                 moveSlide(1000);
+                clearButton();
+
+                if(index<buttonArray.length+1) {
+                    buttonArray[index-1].style.backgroundColor = 'grey';
+                }
+                else{
+                    buttonArray[index-5].style.backgroundColor = 'gray';
+                }
+
+                
 
                 setTimeout(function(){
                     if(index===sliderLength+1){
