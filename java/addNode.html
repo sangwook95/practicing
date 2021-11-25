@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+          width: 160px;  
+          
+        }
+        span {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="add-text">
+            <input type="text" name="" id="">
+            <button>추가</button>
+        </div>
+
+        <ul id="text-List">
+
+        </ul>
+    </div>
+
+
+        <script>
+            const textList = document.getElementById('text-List');
+            const addText = document.querySelector('.add-text');
+            const addButton = addText.childNodes[3];
+            const inputText = addText.childNodes[1];
+
+            addButton.addEventListener('click', addTextContent);
+
+            function addTextContent() {
+                let newLi = document.createElement('li');
+                let newText = document.createTextNode(inputText.value);
+                let span = document.createElement('span');
+                let spanX = document.createTextNode('X');
+                span.appendChild(spanX);
+                
+                newLi.appendChild(newText);
+                newLi.appendChild(span);
+                textList.appendChild(newLi);
+                inputText.value = '';
+                
+                let spanXArray = document.querySelectorAll('span');
+
+                span.addEventListener('click', removeParent);
+
+                function removeParent() {
+                    this.parentNode.parentNode.removeChild(this.parentNode);
+                }
+
+            }
+
+        </script>
+</body>
+
+</html>

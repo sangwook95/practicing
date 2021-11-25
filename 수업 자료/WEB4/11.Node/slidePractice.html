@@ -89,6 +89,7 @@
     </div>
 
     <script>
+        
         let index=1;    // 현재 보여주고있는 슬라이드의 인덱스
         let moveCheck=true;     //움직임이 완료 되었는가?
         const sliderBox = document.querySelector('.slider-box');    //슬라이드를 감싸는 영역
@@ -170,8 +171,6 @@
                 else{
                     buttonArray[index-5].style.backgroundColor = 'gray';
                 }
-
-                
 
                 setTimeout(function(){
                     if(index===sliderLength+1){
