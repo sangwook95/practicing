@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first">첫번째Div</div>
+    <div class="second">두번째Div</div>
+
+    <script>
+
+        const firstDiv = document.querySelector('.first');
+        const secondDiv = document.querySelector('.second');
+
+        firstDiv.onclick = function(){
+            alert("1-1");
+        }
+        firstDiv.onclick = function(){
+            alert("1-2");
+        }
+        // 객체의 onclick 프로퍼티에 함수를 지정하는 형태로, 동일이벤트에 대해서 하나의 함수만 연결할 수 있다 
+
+        secondDiv.addEventListener('click',function(){
+            alert('2-1');
+        })
+
+        secondDiv.addEventListener('click',function(){
+            alert('2-2');
+        })
+        // 객체에 새로운 이벤트리스너를 추가해주는 형태로, 동일 이벤트에 대해 여러개의 함수를 연결 할 수 있다!
+    </script>
+</body>
+</html>

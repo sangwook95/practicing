@@ -61,7 +61,6 @@
             height: 10px;
             border: 2px solid gray;
             border-radius: 50%;
-            text-indent: -9999px;
             margin : 0 10px;
         }
     </style>
@@ -78,75 +77,72 @@
         </div>
         <div class="buttons">
             <button onclick="slideToLeft()">이전</button>
-            <ul class="radio-container">
-                <li class="round-button">1</li>
-                <li class="round-button">2</li>
-                <li class="round-button">3</li>
-                <li class="round-button">4</li>
+            <ul class=radio-container>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
             </ul>
             <button onclick="slideToRight()">다음</button>
         </div>
     </div>
 
     <script>
-        
         let index=1;    // 현재 보여주고있는 슬라이드의 인덱스
         let moveCheck=true;     //움직임이 완료 되었는가?
         const sliderBox = document.querySelector('.slider-box');    //슬라이드를 감싸는 영역
         const slideContents = document.querySelectorAll('.slide')   //슬라이드 컨텐츠 전체를 선택
-        const sliderLength = slideContents.length;//슬라이드 컨텐츠의 갯수
-        
-        
+        const sliderLength = slideContents.length;                  //슬라이드 컨텐츠의 갯수
+
         //노드 복사해주기
         let copyFirst = sliderBox.firstElementChild.cloneNode(true);
         let copylast = sliderBox.lastElementChild.cloneNode(true);
-        
+
         //복사한 노드 추가
         sliderBox.appendChild(copyFirst);       //자식요소중 마지막으로 추가
-        sliderBox.insertBefore(copylast, sliderBox.firstElementChild);  //추가하되, 지정한 노드 앞에 추가\
-        
-        
+        sliderBox.insertBefore(copylast, sliderBox.firstElementChild);  //추가하되, 지정한 노드 앞에 추가
+
         
         sliderBox.style.width = 300 * (sliderLength+2) + "px";
         //노드를 복사해서 앞에 한칸이 더 생겼으니 위의 index를 1로 바꿔, translate를 이용해 한칸 이동시켜줘야한다.
         sliderBox.style.transform = "translateX(-" + 300*(index) +"px)";
-        
-        const buttonArray = document.querySelectorAll('.round-button'); // 버튼 배열 생성
-        for(let i = 0; i < buttonArray.length; i++) { //각각 버튼에이벤트 등록
-            buttonArray[i].addEventListener('click',greyPaint);
-        }
-        
-        buttonArray[index-1].style.backgroundColor = 'grey';
 
-        function greyPaint() {
-            if(moveCheck) {
-                moveCheck = false;
+        //반복문을 이용해 버튼들에 이벤트 리스너 추가하기
+        let slideRoundButtons = document.querySelectorAll('.round-button');
+        for ( let i = 0 ; i < slideRoundButtons.length ; i ++ ){
+            slideRoundButtons[i].buttonIndex=i+1; // 버튼 눌렀을때 슬라이드 이동을 위한 인덱스 값
+            slideRoundButtons[i].addEventListener('click',buttonClick)
+        }
+
+        //첫번째 버튼 활성화 시키기
+        slideRoundButtons[index-1].style.backgroundColor='gray';
+
+        function buttonClick(){
+            if(moveCheck){
+                moveCheck=false;
                 clearButton();
-                this.style.backgroundColor = 'grey';
-                index = this.innerText;
+                this.style.backgroundColor="gray";
+                index = this.buttonIndex;
                 moveSlide(1000);
-                setTimeout(function() {
-                    moveCheck = true;
+                setTimeout(function(){
+                    moveCheck=true;
                 }, 1000);
             }
         }
-        
-
         //이전 버튼 누르면 작동
         function slideToLeft(){
             if(moveCheck){
                 moveCheck=false;
-                
+
                 index--;
                 moveSlide(1000);
-                
                 clearButton();
-                if(index>0) {
-                    buttonArray[index-1].style.backgroundColor = 'gray';
-                }
-                else{
-                buttonArray[index+3].style.backgroundColor = 'grey';
-                }
+
+                if(index>0)
+                    slideRoundButtons[index-1].style.backgroundColor='gray';
+                else
+                    slideRoundButtons[slideRoundButtons.length-1].style.backgroundColor='grey'
+
                 setTimeout(function(){
                     if(index===0){
                         index=sliderLength;
@@ -160,18 +156,16 @@
         function slideToRight(){
             if(moveCheck){
                 moveCheck=false;
-                
+
                 index++;
                 moveSlide(1000);
                 clearButton();
 
-                if(index<buttonArray.length+1) {
-                    buttonArray[index-1].style.backgroundColor = 'grey';
-                }
-                else{
-                    buttonArray[index-5].style.backgroundColor = 'gray';
-                }
-
+                if(index<slideRoundButtons.length+1)
+                    slideRoundButtons[index-1].style.backgroundColor='gray';
+                else
+                    slideRoundButtons[0].style.backgroundColor='grey'
+                
                 setTimeout(function(){
                     if(index===sliderLength+1){
                         index=1;
@@ -185,12 +179,15 @@
         //슬라이드 움직이는 함수
         function moveSlide(time){
             sliderBox.style.transition = time +'ms';
-            sliderBox.transform = "translateX(-" + 300*(index) +"px)";
+            sliderBox.style.transform = "translateX(-" + 300*(index) +"px)";
         }
-        function clearButton() {
-            for(let i = 0; i < buttonArray.length; i++) {
-                buttonArray[i].style.backgroundColor = ''
+
+        //라디오버튼 지우는 함수
+        function clearButton(){
+            for(let i = 0 ; i < slideRoundButtons.length ; i++){
+                slideRoundButtons[i].style.backgroundColor='';
             }
+
         }
     </script>
 </body>

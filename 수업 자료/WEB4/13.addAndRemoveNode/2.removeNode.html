@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>곧 삭제될 태그입니다.
+            <span>
+                삭제
+            </span>
+        </p>
+    </div>
+    <script>
+        const pTag = document.querySelector('.container').childNodes[1];
+        const spanTag = pTag.childNodes[1];
+
+        spanTag.addEventListener('click', function(){
+            pTag.parentNode.removeChild(this.parentNode);
+        })
+    </script>
+</body>
+</html>
