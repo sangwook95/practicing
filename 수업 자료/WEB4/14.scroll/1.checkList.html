@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+
+        .check-list-container{
+            width: 200px;
+            height: 300px;
+            border: 2px solid gray;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .check-list-name{
+            border-bottom: 1px solid gray;
+            text-align: center;
+        }
+
+        .check-list{
+            padding: 8px;
+        }
+
+        .check-list-content{
+            margin-top: 8px;
+            border-bottom: 1px solid #aaaaaa;
+        }
+        .done{
+            color: gray;
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="check-list-container">
+            <div class="check-list-name">
+                <h3>오늘의 할일</h3>
+            </div>
+            <ul class="check-list">
+                <li class="check-list-content">
+                    <input type="checkbox" name="" id="">
+                    <label>
+                        숨쉬기
+                    </label>
+                </li>
+                <li class="check-list-content">
+                    <input type="checkbox" name="" id="">
+                    <label>
+                        밥먹기
+                    </label>
+                </li>
+                <li class="check-list-content">
+                    <input type="checkbox" name="" id="">
+                    <label>
+                        잠자기
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        
+        const checkLists = document.querySelectorAll('.check-list-content');
+        
+        for( let i = 0 ; i < checkLists.length  ; i++ ){
+            checkLists[i].childNodes[1].addEventListener('change',function(){
+                checkLists[i].childNodes[3].classList.toggle('done')
+                // toggle을 사용하면 아래와 같이 작동한다
+                
+                // if(checkLists[i].childNodes[1].checked){
+                //     checkLists[i].childNodes[3].classList.add("done");
+                // }else{
+                //     checkLists[i].childNodes[3].classList.remove("done");
+                // }
+            })
+        }
+
+
+    </script>
+</body>
+</html>
