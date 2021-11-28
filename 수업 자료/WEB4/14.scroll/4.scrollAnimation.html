@@ -47,7 +47,33 @@
     </div>
 
     <script>
-        const h2Tags = document.getElementsByTagName('h2');
+        
+        let h2Tags = document.getElementsByTagName('h2');
+        let body = document.getElementsByTagName('body');
+        
+        body[0].classList.add('stop-scroll');
+
+        for (let i = 0; i < h2Tags.length; i++) {
+                h2Tags[i].classList.add('by-left');
+
+                document.addEventListener('scroll', function () {
+                    if (scrollY > i * 900 - 100) {
+                        h2Tags[i].classList.remove('by-left');
+                    };
+                });
+            };
+
+
+        setTimeout( function() {
+            h2Tags[0].classList.remove('by-left');
+            setTimeout( () => {
+                body[0].classList.remove('stop-scroll');
+            }, 1000);
+        }, 1000
+        );
+
+        
+        /* const h2Tags = document.getElementsByTagName('h2');
         const body = document.getElementsByTagName('body');
         body[0].classList.add('stop-scroll');
 
@@ -65,7 +91,7 @@
             setTimeout(() => {
                 body[0].classList.remove('stop-scroll');
             }, 1000)
-        }, 1000);
+        }, 1000); */
 
 
 

@@ -77,7 +77,20 @@
         
         const checkLists = document.querySelectorAll('.check-list-content');
         
-        for( let i = 0 ; i < checkLists.length  ; i++ ){
+        for( let i = 0; i < checkLists.length; i++) {
+            checkLists[i].childNodes[1].addEventListener('change', function() {
+
+                if(checkLists[i].childNodes[1].checked) {
+                    checkLists[i].childNodes[3].classList.add('done');
+                }
+                else {
+                    checkLists[i].childNodes[3].classList.remove('done');
+                }
+            })
+        }
+
+
+        /* for( let i = 0 ; i < checkLists.length  ; i++ ){
             checkLists[i].childNodes[1].addEventListener('change',function(){
                 checkLists[i].childNodes[3].classList.toggle('done')
                 // toggle을 사용하면 아래와 같이 작동한다
@@ -88,9 +101,9 @@
                 //     checkLists[i].childNodes[3].classList.remove("done");
                 // }
             })
-        }
+        } */
 
-
+        
     </script>
 </body>
 </html>
