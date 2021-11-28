@@ -9,9 +9,9 @@
 <body>
     <script>
 
-        let now = new Date(); // 현재 시간정보를 사용할때 인수 없이 이용한다
+        /* let now = new Date(); // 현재 시간정보를 사용할때 인수 없이 이용한다
         let day = new Date('2021-09-20'); // 특정한 날짜 지정도 가능하다
-        let dayAndTime = new Date('2021-09-20T19:54:34'); // 날짜 뒤에 대문자 T와 시간 넣어주면 시간도 설정 가능
+        let dayAndTime = new Date('2021-09-20T19:54:34'); // 날짜 뒤에 대문자 T와 시간 넣어주면 시간도 설정 가능 */
         /*
         이런식으로 선언할수 있다!
         2021
@@ -45,6 +45,15 @@
         setMillisconds()
 
         */
+
+        let myBirthDay = new Date('1995-01-12T21:50:49');
+        let myMinutes = myBirthDay.getMinutes();
+        let myHours = myBirthDay.getHours();
+        let mySeconds = myBirthDay.getSeconds();
+        
+        document.write(myMinutes);
+        document.write(myHours);
+        document.write(mySeconds);
 
     </script>
 </body>

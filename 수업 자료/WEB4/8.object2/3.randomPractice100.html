@@ -7,7 +7,7 @@
     <title>UP & DOWN</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         let input,count = 5;
         let answer = Math.floor(Math.random()*100+1);
         let result;
@@ -35,6 +35,36 @@
         }else{
             document.write('정답은 ' + answer + "입니다...")
         }
+    </script> -->
+    
+    <script>
+            let chance = 5
+            let quizNumber = Math.floor(Math.random() * 100 + 1);
+
+            while (true) {
+                userNumber = parseInt(prompt('1부터~ 100사이의 숫자를 맞춰보세요!', '남은기회' + chance--));
+
+                if(chance === 0) {
+                    alert('실패입니다');
+                    document.write('정답은' + quizNumber + '입니다!');
+                    break;
+                }
+                else if(userNumber == quizNumber) {
+                    alert('정답입니다!');
+                    document.write('정답은' + quizNumber + '입니다!');
+                    break;
+                }
+                else if(userNumber < quizNumber) {
+                    alert('up');
+                }
+                else{
+                    alert('down');
+                }
+            }
+
+
+
+
     </script>
 </body>
 </html>

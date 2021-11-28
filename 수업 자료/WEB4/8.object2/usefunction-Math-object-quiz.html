@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <script>
+    <!-- <script>
         let testScore = new Array(parseInt(prompt('시험을 몇과목 치르셨나요???')));
         
         arrayMaker(testScore); // 배열 생성
@@ -38,8 +38,37 @@
         }
 
 
-    </script>
+    </script> -->
+    <script>
+        let scoreArray = new Array(parseInt(prompt('시험 과목 수를 입력해주세요')));
 
+        arrayMaker(scoreArray);
+        
+        let maxScore = Math.max(...scoreArray);
+        let minScore = Math.min(...scoreArray);
+
+        averageMaker(scoreArray);
+        let averageScore = averageMaker(scoreArray);
+
+        document.write('시험 과목의 평군 점수는' + averageScore + '이고 최고점은' + maxScore + ', 최저점은' + minScore + '입니다');
+
+
+
+        function arrayMaker(array) {
+            for( let i = 0; i < array.length; i++) {
+                array[i] = Math.round(Math.random()*100+1);
+            }
+        }
+        
+        function averageMaker(array) {
+            let sum = 0;
+            for( let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum/array.length;
+        }
+
+    </script>
 
 </body>
 </html>

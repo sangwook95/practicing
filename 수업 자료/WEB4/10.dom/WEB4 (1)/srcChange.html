@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .img-show {
+            margin-bottom: 30px;
+        }
+        li {
+            list-style: none;
+        }
+        .img-container > li {
+            float: left;
+            cursor: pointer;
+        }
+        .clear-fix::after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-show"> 
+        <img class='img' src="../수업자료 이미지 폴더/character_bigs_01.png" alt="캐릭터">
+    </div>
+    <ul class="img-container clear-fix">
+        <li><img src="../수업자료 이미지 폴더/character_bigs_01.png" alt=""></li>
+        <li><img src="../수업자료 이미지 폴더/character_bigs_02.png" alt=""></li>
+        <li><img src="../수업자료 이미지 폴더/character_bigs_03.png" alt=""></li>
+    </ul>
+
+    <script>
+    
+        let imgShow = document.querySelector('.img-show > img');
+        let imgs = document.querySelectorAll('ul > li > img');
+
+        for ( let i = 0; i < imgs.length; i ++) {
+            imgs[i].addEventListener('click', imgChanger);
+        };
+
+        
+        function imgChanger() {
+            imgShow.src = this.src;
+        }
+
+    </script>
+</body>
+</html>

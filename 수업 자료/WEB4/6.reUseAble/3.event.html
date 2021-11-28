@@ -13,12 +13,18 @@
             border: 1px solid black;
             list-style: none;
             padding: 10px;
+            cursor: pointer;
         }
+        span {
+            width: 100px;
+            height: 100px;
+        }
+        
 
     </style>
 </head>
 <body>
-    <ul>
+    <!-- <ul>
         <li onclick="changeFontSize('14pt')">14pt</li>
         <li onclick="changeFontSize('20pt')">20pt</li>
         <li onclick="changeFontSize('26pt')">26pt</li>
@@ -30,6 +36,26 @@
         function changeFontSize(size){
             document.querySelector('.font-size').style.fontSize=size;
         }
+    </script> -->
+
+    <ul>
+        <li onclick='colorChangeFunc("red")'>red</li>
+        <li onclick='colorChangeFunc("green")'>green</li>
+        <li onclick='colorChangeFunc("yellow")'>yellow</li>
+    </ul>
+    <span class="background-color">
+        위의 버튼을 누르면 배경 컬러가 변경됩니다
+    </span>
+
+    <script>
+        let span = document.getElementsByTagName('span')
+
+        function colorChangeFunc(color) {
+            span[0].style.backgroundColor = color;
+        }
+
     </script>
+
+
 </body>
 </html>

@@ -10,7 +10,7 @@
     
     <script>
         
-        forAndFunction(100);
+        /* forAndFunction(100);
         
 
         function forAndFunction(count){
@@ -21,7 +21,21 @@
                 
             }
             alert(sum);
-        }
+        } */
+
+        let num = parseInt(prompt('숫자를 입력하시오'));
+
+        sumNumber(num);
+
+        function sumNumber(count) {
+            let sum = 0;
+            for(let i = 1; i <= count; i++) {
+                sum += i
+            }
+            document.write(sum);
+        };
+
+        
     </script>
 </body>
 </html>

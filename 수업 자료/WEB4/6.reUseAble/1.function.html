@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-
+/* 
         function multiply(a,b = 5){
             return a * b;
         }
@@ -19,7 +19,19 @@
         let multi = multiply(number1, number2);
 
         
-        alert(multi);
+        alert(multi); */
+        
+        
+        let num1 = parseInt(prompt('숫자를 입력하시오', 'num1'))
+        let num2 = parseInt(prompt('숫자를 입력하시오', 'num2'))
+
+        /* let calcFunc = (a, b) => console.log(a*b); */
+
+        let calcFunc = function(a, b) {
+            return a + b;
+        }
+        alert(calcFunc(num1, num2));
+        
 
 
     </script>
