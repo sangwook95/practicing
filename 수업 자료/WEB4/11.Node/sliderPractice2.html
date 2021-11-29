@@ -99,9 +99,19 @@
         let lastSlideCopy = radioContainer.lastElementChild.cloneNode(true);
 
         slideContainer.appendChild(fistSlideCopy);
+        slideContainer.insertBefore(lastSlideCopy,slideContainer.firstElementChild);
 
-        /* slideContainer.style.transition= 'translateX(-' + 300 + 'px)'; */
-        
+        slidecontainer.style.width = 300 + (slideArray.length + 2) + 'px'
+        buttonArray[index-1].style.backgroundColor = 'grey';
+        slidecontainer.style.transform = 'translateX(-' + 300 + 'px)';
+
+
+
+        function clearButton() {
+            for( let i = 0; i < slide)
+        }
+
+
 
     </script>
 
