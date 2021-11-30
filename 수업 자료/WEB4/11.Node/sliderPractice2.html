@@ -90,26 +90,56 @@
 
     <script>
         let index = 1;
-        let isMoved = true;
+        let moveCheck = true;
         let buttonArray = document.querySelectorAll('.round-button');
         let radioContainer = document.querySelector('.radio-container')
-        let slideContainer = document.getElementsByClassName('slider-box')
+        let slideContainer = document.querySelector('.slider-box')
         let slideArray = document.querySelectorAll('.slider-box > li') 
-        let fisrtSlideCopy = radioContainer.firstElementChild.cloneNode(true);
-        let lastSlideCopy = radioContainer.lastElementChild.cloneNode(true);
+        let firstSlideCopy = slideContainer.firstElementChild.cloneNode(true);
+        let lastSlideCopy = slideContainer.lastElementChild.cloneNode(true);
 
-        slideContainer.appendChild(fistSlideCopy);
+        slideContainer.appendChild(firstSlideCopy);
         slideContainer.insertBefore(lastSlideCopy,slideContainer.firstElementChild);
 
-        slidecontainer.style.width = 300 + (slideArray.length + 2) + 'px'
+        slideContainer.style.width = 300 * (slideArray.length + 2) + 'px'
         buttonArray[index-1].style.backgroundColor = 'grey';
-        slidecontainer.style.transform = 'translateX(-' + 300 + 'px)';
+        slideContainer.style.transform = 'translateX(-' + 300 + 'px)';
 
-
-
-        function clearButton() {
-            for( let i = 0; i < slide)
+        for( let i = 0; i < buttonArray.length; i++) {
+            buttonArray[i].addEventListener('click', buttonNextClick)
         }
+
+        function buttonNextClick() {
+            if(moveCheck) {
+                moveCheck = false;
+                buttonClear();
+                this.style.backgroundColor = 'grey';
+                index = this.innerText;
+                slideFunc()
+                
+            }
+        }
+        
+
+
+
+
+
+        
+
+
+        function slideFunc() {
+            slideContainer.style.transform = 'translateX(-' + (300*index) + 'px)'
+        }
+        function buttonClear() {
+            for( let i = 0; i < buttonArray.length; i++) {
+                buttonArray[i].style.backgroundColor = '';
+            }
+        }
+
+
+
+
 
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>가위</button>
+    <button>바위</button>
+    <button>보</button>
+
+
+    <script>
+        let answer = Math.round(Math.random()*2);
+        let buttonArray = document.getElementsByTagName('button');
+        let index = 0
+        for( let i = 0; i < buttonArray.length; i++) {
+            buttonArray[i].addEventListener('click', function() {
+               index += i
+            })
+        }
+
+        if( index = answer) {
+            document.write('비겼습니다!')
+        }
+    </script>
+</body>
+</html>
