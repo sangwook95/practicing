@@ -1,4 +1,4 @@
 # sawook-codding
-HELLO!
-this is my codding!
+Hello!
+this is my codding practicing!
 thank you
