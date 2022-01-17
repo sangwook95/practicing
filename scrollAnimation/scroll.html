@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scroll.js" defer></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        text-align: center;
+        font-size: 50px;
+      }
+
+      .container > h2 {
+        padding: 400px;
+        line-height: 100px;
+        transition: 1s;
+      }
+
+      /* 왼쪽부터 서서히 오른쪽으로 나타나는 효과 */
+      .by-left {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      /* 스크롤 막는 클래스 */
+      .stop-scroll {
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Lorem Ipsum is</h2>
+      <h2>simply dummy text of the printing</h2>
+      <h2>and typesetting industry.</h2>
+      <h2>Lorem Ipsum has been the industry's</h2>
+      <h2>standard dummy text ever since the 1500s</h2>
+      <h2>when an unknown printer took</h2>
+    </div>
+  </body>
+</html>
