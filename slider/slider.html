@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./slider.js" defer></script>
+    <title>슬라이더 연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .wrapper {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .slider {
+        width: 300px;
+        height: 150px;
+        overflow: hidden;
+      }
+      .slider-box {
+        /* width: 1200px; */
+        height: 150px;
+      }
+      .slide {
+        width: 300px;
+        height: 150px;
+        float: left;
+        font-size: 100px;
+        text-align: center;
+      }
+      .content1 {
+        background-color: red;
+      }
+      .content2 {
+        background-color: blue;
+      }
+      .content3 {
+        background-color: pink;
+      }
+      .content4 {
+        background-color: blueviolet;
+      }
+      .content5 {
+        background: #e333;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .radio-container {
+        display: flex;
+      }
+      .round-button {
+        width: 10px;
+        height: 10px;
+        border: 2px solid gray;
+        border-radius: 50%;
+        text-indent: -9999px;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="slider">
+        <ul class="slider-box">
+          <li class="slide content1">1</li>
+          <li class="slide content2">2</li>
+          <li class="slide content3">3</li>
+          <li class="slide content4">4</li>
+          <li class="slide content5">5</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="slideToLeft()">이전</button>
+        <ul class="radio-container">
+          <li class="round-button"></li>
+          <li class="round-button"></li>
+          <li class="round-button"></li>
+          <li class="round-button"></li>
+          <li class="round-button"></li>
+        </ul>
+        <button onclick="slideToRight()">다음</button>
+      </div>
+    </div>
+  </body>
+</html>
